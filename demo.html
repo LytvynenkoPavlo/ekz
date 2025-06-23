@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"/>
+  <title>AR подібність</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <style>
+    html, body { margin:0; padding:0; width:100vw; height:100vh; overflow:hidden; }
+    #info { position:absolute; top:10px; left:10px; z-index:10;
+      background: rgba(0,0,0,0.6); color:white; padding:8px 12px;
+      border-radius:6px; font-size:14px;
+    }
+    #status {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: yellow;
+    font-size: 16px;
+    background: rgba(0,0,0,0.6);
+    padding: 8px 12px;
+    border-radius: 8px;
+    z-index: 10;
+  }
+    #info span { font-weight:bold; color:#00ffaa; }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+      "mindar-image-three": "https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-three.prod.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="info">
+    🔁 Подібність: <span id="ratio">-</span><br>
+    📐 Площа: <span id="area">-</span><br>
+    📦 Обʼєм: <span id="volume">-</span>
+  </div>
+  <div id="status">🕵️‍♂️ Шукаю маркер...</div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
